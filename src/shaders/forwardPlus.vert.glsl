@@ -18,5 +18,5 @@ void main() {
     v_position = a_position;
     v_normal = a_normal;
     v_uv = a_uv;
-	
+	v_viewPosition = vec3(u_viewMatrix * vec4(a_position, 1.0));
 }
