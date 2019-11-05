@@ -1,11 +1,13 @@
 WebGL Clustered and Forward+ Shading
 ======================
 
-**University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 5**
+**University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 6**
 
-* (TODO) YOUR NAME HERE
-* Tested on: (TODO) **Google Chrome 222.2** on
-  Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Dewang Sultania
+	  * [LinkedIn](https://www.linkedin.com/in/dewang-sultania/)
+
+* Tested on: **Google Chrome 2019.11.2.6233255** on
+  Windows 10, Intel Xeon E-2176M @ 2.70GHz 16GB, Quadro P2000 4GB (Personal Computer)
 
 ### Live Online
 
@@ -13,15 +15,30 @@ WebGL Clustered and Forward+ Shading
 
 ### Demo Video/GIF
 
-[![](img/video.png)](TODO)
+![](images/demo.gif)
 
-### (TODO: Your README)
+#### Forward
 
-*DO NOT* leave the README to the last minute! It is a crucial part of the
-project, and we will not be able to grade you without a good README.
+![](images/forward.gif)
 
-This assignment has a considerable amount of performance analysis compared
-to implementation work. Complete the implementation early to leave time!
+
+
+
+#### Forward+
+
+![](images/forward_plus.gif)
+
+
+
+
+#### Clustered
+
+![](images/clustered.gif)
+
+
+
+### Performance Analysis
+![](images/perf.JPG)
 
 
 ### Credits
