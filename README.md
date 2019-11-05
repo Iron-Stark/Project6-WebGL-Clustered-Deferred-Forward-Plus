@@ -4,42 +4,30 @@ WebGL Clustered and Forward+ Shading
 **University of Pennsylvania, CIS 565: GPU Programming and Architecture, Project 6**
 
 * Dewang Sultania
-	  * [LinkedIn](https://www.linkedin.com/in/dewang-sultania/)
+  * [LinkedIn](https://www.linkedin.com/in/dewang-sultania/)
 
 * Tested on: **Google Chrome 2019.11.2.6233255** on
   Windows 10, Intel Xeon E-2176M @ 2.70GHz 16GB, Quadro P2000 4GB (Personal Computer)
 
-### Live Online
-
-[![](img/thumb.png)](http://TODO.github.io/Project5B-WebGL-Deferred-Shading)
-
 ### Demo Video/GIF
 
-![](images/demo.gif)
+![](https://drive.google.com/uc?export=view&id=1GDefK5J8xOBN_drRp3XQk6X0SvXTG5d7)
 
 #### Forward
 
-![](images/forward.gif)
-
-
-
+![](https://drive.google.com/uc?export=view&id=1hgzrJAexwYWJFqGiG2ZkpQauutt4PMsT)
 
 #### Forward+
 
-![](images/forward_plus.gif)
-
-
-
+![](https://drive.google.com/uc?export=view&id=14tIgU2n4WopmrjQ25FHygyHMH03mzxYJ)
 
 #### Clustered
 
-![](images/clustered.gif)
-
-
+![](https://drive.google.com/uc?export=view&id=1Ahk5_bBYn9Urequv_mnGbEuvyqBglucz)
 
 ### Performance Analysis
-![](images/perf.JPG)
 
+![](https://drive.google.com/uc?export=view&id=19286xcxho2h2SUvzu8nudsOU2JyjoTIv)
 
 ### Credits
 
