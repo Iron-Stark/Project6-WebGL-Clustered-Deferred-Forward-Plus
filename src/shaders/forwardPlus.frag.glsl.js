@@ -10,11 +10,24 @@ export default function(params) {
   uniform sampler2D u_lightbuffer;
 
   // TODO: Read this buffer to determine the lights influencing a cluster
+
+      
+  uniform float u_farClip;
+  uniform float u_nearClip;
+  uniform float u_nearWidth;
+  uniform float u_nearHeight;
+  uniform float u_farWidth;
+  uniform float u_farHeight;
+  uniform float u_xSlices;
+  uniform float u_ySlices;
+  uniform float u_zSlices;
+
   uniform sampler2D u_clusterbuffer;
 
   varying vec3 v_position;
   varying vec3 v_normal;
   varying vec2 v_uv;
+  varying vec3 v_viewPosition;
 
   vec3 applyNormalMap(vec3 geomnor, vec3 normap) {
     normap = normap * 2.0 - 1.0;
@@ -81,8 +94,27 @@ export default function(params) {
 
     vec3 fragColor = vec3(0.0);
 
-    for (int i = 0; i < ${params.numLights}; ++i) {
-      Light light = UnpackLight(i);
+    // Here we calculate the slice in which the fragment is.
+
+    float proportion = ( (abs(v_viewPosition.z) - u_nearClip)/(1.0 * u_farClip - u_nearClip) );
+    float sliceWidth = u_nearWidth + (u_farWidth - u_nearWidth) * proportion;
+    float sliceHeight = u_nearHeight + (u_farHeight - u_nearHeight) * proportion;
+    int cellX = int((v_viewPosition.x + 0.5 * sliceWidth) / (sliceWidth / u_xSlices));
+    int cellY = int((v_viewPosition.y + 0.5 * sliceHeight) / (sliceHeight / u_ySlices));
+    int cellZ = int((abs(v_viewPosition.z) - u_nearClip) / ((u_farClip - u_nearClip) / u_zSlices));
+
+    int index = cellX + cellY * int(u_xSlices) + cellZ * int(u_xSlices * u_ySlices);
+
+    // The number of lights
+    int numLights = int(ExtractFloat(u_clusterbuffer, ${params.clusterTextureWidth}, ${params.clusterTextureHeight}, index, 0));
+
+    
+    // Iterate through all the lights
+    for (int i = 0; i < ${params.clusterTextureHeight} * 4 - 1; ++i) {
+      if(i > numLights)
+        break;
+      int lightId = int(ExtractFloat(u_clusterbuffer, ${params.clusterTextureWidth}, ${params.clusterTextureHeight}, index, i));
+      Light light = UnpackLight(lightId);
       float lightDistance = distance(light.position, v_position);
       vec3 L = (light.position - v_position) / lightDistance;
 
