@@ -11,7 +11,7 @@ WebGL Clustered and Forward+ Shading
   
 ### Live Demo
 
-![Link](https://iron-stark.github.io/Project6-WebGL-Clustered-Deferred-Forward-Plus/)
+[Link](https://Iron-Stark.github.io/Project6-WebGL-Clustered-Deferred-Forward-Plus/)
 
 ### Demo Video/GIF
 
