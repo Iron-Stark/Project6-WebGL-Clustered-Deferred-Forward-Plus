@@ -8,6 +8,10 @@ WebGL Clustered and Forward+ Shading
 
 * Tested on: **Google Chrome 2019.11.2.6233255** on
   Windows 10, Intel Xeon E-2176M @ 2.70GHz 16GB, Quadro P2000 4GB (Personal Computer)
+  
+### Live Demo
+
+![Link](https://iron-stark.github.io/Project6-WebGL-Clustered-Deferred-Forward-Plus/)
 
 ### Demo Video/GIF
 
